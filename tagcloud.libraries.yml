@@ -1,5 +1,4 @@
-jqcloud:
-  version: 1.x
+tagcloud:
   css:
     theme:
       css/jqcloud.css: {}
@@ -8,3 +7,7 @@ jqcloud:
     js/default.js: {}
   dependencies:
     - core/jquery
+    - core/drupalSettings
+    - core/drupal
+    - core/drupal.ajax
+    - core/jquery.once

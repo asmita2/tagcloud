@@ -29,22 +29,13 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-    'block',
-    'block-' ~ configuration.provider|clean_class,
-    'block-' ~ plugin_id|clean_class,
-  ]
-%}
-<div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    <div{{ content_attributes.addClass('content') }}>
-      {{ content }}
-    </div>
-  {% endblock %}
+
+<div class="custom-tagclouds">
+ <ul>
+  {% for custom_tag in custom_tags %}
+    <li>{{ custom_tag.text }}</li>
+    <li>{{ custom_tag.weight }}</li>
+  {% endfor %}
+</ul>
+
 </div>
