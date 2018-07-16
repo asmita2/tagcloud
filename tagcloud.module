@@ -1,0 +1,26 @@
+<?php
+
+function tagcloud_theme($existing, $type, $theme, $path) {
+  return array(
+    'block__tagcloud' => array(
+      'render element' => 'elements',
+      'template' => 'block--tagcloud',
+      'base hook' => 'block'
+    )
+  );
+}
+
+function tagcloud_preprocess_html(&$variables) {
+
+  $tags = [
+    0 => ['text' => 'Lorem','weight'=> 13],
+    1 => ['text' => 'Ipsum','weight'=> 10.5 ,'html' =>['class' => 'vertical']],
+    2 => ['text' => 'good day','weight'=> 9.4],
+    3 => ['text' => 'Good morning','weight'=> 8, 'html' =>['class' => 'vertical']],
+  ];
+
+  $mytags = json_encode($tags);
+  $variables['#attached']['library'][] = ['tagcloud/jqcloud', 'tagcloud/default'];
+
+  $variables['#attached']['drupalSettings']['mytags'] = $mytags;
+}

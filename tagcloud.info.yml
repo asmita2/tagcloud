@@ -1,0 +1,10 @@
+name: Tag cloud  module
+description: Creates a page showing "New Module".
+package: Custom
+type: module
+version: 1.0
+core: 8.x
+libraries:
+  - core/jquery
+  - tagcloud/jqcloud
+  - tagcloud/default

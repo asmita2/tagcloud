@@ -1,0 +1,10 @@
+jqcloud:
+  version: 1.x
+  css:
+    theme:
+      css/jqcloud.css: {}
+  js:
+    js/jqcloud.js: {}
+    js/default.js: {}
+  dependencies:
+    - core/jquery
