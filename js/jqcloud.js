@@ -12,6 +12,7 @@
 (function( $ ) {
   "use strict";
   $.fn.jQCloud = function(word_array, options) {
+
     // Reference to the container element
     var $this = this;
     // Namespace word ids to avoid collisions between multiple clouds

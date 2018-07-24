@@ -21,15 +21,14 @@ class TagBlock extends BlockBase {
   public function build() {
 
   $tags = [
-      0 => ['text' => 'Lorem','weight'=> 13],
-      1 => ['text' => 'Ipsum','weight'=> 10.5 ,'html' =>['class' => 'vertical']],
-      2 => ['text' => 'good day','weight'=> 9.4],
-      3 => ['text' => 'Good morning','weight'=> 8, 'html' =>['class' => 'vertical']],
+      ['text' => 'Sonal','weight'=> 13],
+      ['text' => 'Sagar','weight'=> 10.5 ,'html' =>['class' => 'vertical']],
+      ['text' => 'Sonvir','weight'=> 9.4],
+      ['text' => 'Snehal','weight'=> 8, 'html' =>['class' => 'vertical']],
     ];
 
     return [
       '#theme' => 'block_tagcloud',
-      '#custom_tags' => $tags,
       '#attached' => [
         'library' => ['tagcloud/tagcloud'],
         'drupalSettings' =>[
